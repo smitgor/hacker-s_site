@@ -16,8 +16,8 @@ app.use(express.static(path.join(__dirname, '/')));
 
 const port = process.env.PORT || 3001;
 
-app.get('/', (req, res) => {
-    res.render('index');
+app.get('/', function(req, res){
+    res.sendFile('index.html' , { root : __dirname});
 });
 
 
